@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ebebeb;
+}
+h1{
+  color: #0013bbf8;
+}
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1000px;
+  min-width: 800px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+.input-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 8px;
+  align-items: flex-end;
+}
+.input-filed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-filed > label {
+  font-weight: bold;
+}
+.input-filed > input {
+  border-radius: 5px;
+  border: 1px solid #e0e0e0f8;
+  height: 30px;
+  padding: 3px 8px 3px 8px
+}
+.button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.button-group > button{
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 1px solid #e0e0e0f8;
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden
+}
+th{
+  background-color: #0112b3;
+  color: white;
+  font-weight: bold;
+  height: 50px;
+}
+td{
+  vertical-align: middle;
+  color: #333;
+  height: 40px;
+}
+td > button {
+  background-color: #fd3b3be7;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 50px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
