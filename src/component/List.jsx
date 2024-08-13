@@ -27,7 +27,6 @@ const List = ({ countries, setCountries }) => {
                 <button
                   onClick={() => {
                     const filteredCountry = countries.filter((c) => c !== country);
-                    alert("삭제되었습니다.");
                     setCountries(filteredCountry);
                   }}
                 >

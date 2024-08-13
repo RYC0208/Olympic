@@ -31,15 +31,15 @@ h1{
   gap: 8px;
   align-items: flex-end;
 }
-.input-filed {
+.input-field {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.input-filed > label {
+.input-field> label {
   font-weight: bold;
 }
-.input-filed > input {
+.input-field > input {
   border-radius: 5px;
   border: 1px solid #e0e0e0f8;
   height: 30px;
@@ -90,4 +90,13 @@ td > button {
   font-size: 15px;
   margin-right: 5px;
   cursor: pointer;
+  transition-duration: 0.3s;
+  transform: scale(1.0);  
+}
+td > button:hover {
+  background-color: #f07666e7;
+  transform: scale(1.2);
+}
+td > button:active {
+  background-color: #ffeecae7;
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Add from "./component/Add";
+import Main from "./pages/Main";
 
 const App = () => {
   return (
     <div className="root">
-      <Add />
+      <Main />
     </div>
   );
 };
