@@ -36,19 +36,17 @@ const Add = () => {
     setCountries([...countries, formData]);
     initialize();
   };
-
   const updateCountry = () => {
     if (findCountry) {
-      setCountries(prevCountries => {
-        return prevCountries.map(c =>
+      setCountries(prevCountries => 
+        prevCountries.map(c =>
           c.country === formData.country ? { ...c, ...formData } : c
-        );
-      });
+        )
+      );
+      initialize(); // `setCountries`가 완료된 후 호출될 수 있습니다.
     } else {
-      alert("등록되지 않은 국가입니다.");
-      return;
+      alert("등록되지 않은 국가이며, 국가를 추가해주세요.");
     }
-    initialize();
   };
 
   const initialize = () => {
