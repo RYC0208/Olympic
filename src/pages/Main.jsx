@@ -43,7 +43,7 @@ const Add = () => {
           c.country === formData.country ? { ...c, ...formData } : c
         )
       );
-      initialize(); // `setCountries`가 완료된 후 호출될 수 있습니다.
+      initialize(); 
     } else {
       alert("등록되지 않은 국가이며, 국가를 추가해주세요.");
     }
