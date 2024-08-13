@@ -15,4 +15,4 @@ InputField - 부모 컴포넌트인 Form에서 전달 받은 props로 input이�
 <br>
 Button - props에 따라서 버튼의 속성을 변경시켜주는 재사용이 가능한 컴포넌트 <br>
 <br>
-List - contries의 상태에 따라서 list를 보여주는 컴포넌트 <br>
+List - contries의 상태에 따라서 list를 보여주는 컴포넌트 (메달 수에 따라서 정렬가능) <br>
