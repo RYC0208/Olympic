@@ -40,13 +40,14 @@ const Add = () => {
 
   const updateCountry = () => {
     if (findCountry) {
-      setCountries((prevCountries) => 
-        prevCountries.map((c) =>
-          c.country === formData.country ? { ...c, ...formData } : c 
-        )  
-      );
+      setCountries(prevCountries => {
+        return prevCountries.map(c =>
+          c.country === formData.country ? { ...c, ...formData } : c
+        );
+      });
     } else {
       alert("등록되지 않은 국가입니다.");
+      return;
     }
     initialize();
   };
