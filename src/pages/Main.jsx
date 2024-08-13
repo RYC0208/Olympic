@@ -15,6 +15,14 @@ const Add = () => {
   // 중복되어서 따로 분리
   const findCountry = countries.find((c) => c.country === formData.country);
 
+  const updateFormData = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: name === "country" ? value : Number(value),
+    }));
+  };
+
   const addCountry = (event) => {
     event.preventDefault();
 
@@ -28,14 +36,6 @@ const Add = () => {
     }
     setCountries([...countries, formData]);
     initialize();
-  };
-
-  const updateFormData = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: name === "country" ? value : Number(value),
-    }));
   };
 
   const updateCountry = () => {
