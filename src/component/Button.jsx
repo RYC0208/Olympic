@@ -1,15 +1,10 @@
 import React from "react";
 
-const Button = ({ addCountry, updateCountry }) => {
+const Button = ({ text, onClick, type = "button" }) => {
   return (
-    <div className="button-group">
-      <button type="submit" onClick={addCountry}>
-        국가 추가
-      </button>
-      <button type="button" onClick={updateCountry}>
-        업데이트
-      </button>
-    </div>
+    <button type={type} onClick={onClick}>
+      {text}
+    </button>
   );
 };
 
