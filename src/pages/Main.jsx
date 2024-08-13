@@ -27,14 +27,14 @@ const Add = () => {
 
     if (!formData.country || formData.country.trim() === "") {
       alert("국가명이 빈칸입니다.");
-      return;
     }
     else if (findCountry) {
       alert("이미 등록된 국가명입니다.");
-      return;
+      initialize();
+    }else {
+      setCountries([...countries, formData]);
+      initialize();
     }
-    setCountries([...countries, formData]);
-    initialize();
   };
   const updateCountry = () => {
     if (findCountry) {
