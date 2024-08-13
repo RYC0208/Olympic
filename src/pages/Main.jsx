@@ -30,7 +30,7 @@ const Add = () => {
       alert("국가명이 빈칸입니다.");
       return;
     }
-    if (findCountry) {
+    else if (findCountry) {
       alert("이미 등록된 국가명입니다.");
       return;
     }
