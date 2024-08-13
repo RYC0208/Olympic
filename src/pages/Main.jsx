@@ -11,8 +11,7 @@ const Add = () => {
     silver: 0,
     bronze: 0,
   });
-
-  // 중복되어서 따로 분리
+  
   const findCountry = countries.find((c) => c.country === formData.country);
 
   const updateFormData = (event) => {

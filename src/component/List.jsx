@@ -1,11 +1,13 @@
 import React from "react";
 
 const List = ({ countries, setCountries }) => {
+  
   const sortedCountries = [...countries].sort((a, b)=> {
     if(b.gold !== a.gold) return b.gold - a.gold;
     if(b.silver !== a.silver) return b.silver - a.silver;
     return b.bronze - a.bronze;
   })
+
   return (
     <div>
       {sortedCountries.length === 0 ? (
@@ -31,7 +33,7 @@ const List = ({ countries, setCountries }) => {
                 <td>
                   <button
                     onClick={() => {
-                      const filteredCountry = countries.filter((c) => c !== country);
+                      const filteredCountry = sortedCountries.filter((c) => c !== country);
                       setCountries(filteredCountry);
                     }}
                   >
