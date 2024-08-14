@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import Form from "../component/Form";
-import List from "../component/List";
+import Form from "./Form";
+import List from "./List";
 
-const Add = () => {
+const Parent = () => {
   const [countries, setCountries] = useState([]);
   const [formData, setFormData] = useState({
     country: "",
@@ -72,4 +72,4 @@ const Add = () => {
   );
 };
 
-export default Add;
+export default Parent;

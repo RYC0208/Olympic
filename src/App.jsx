@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Main from "./pages/Main";
+import Parent from "./component/Parent";
 
 const App = () => {
   return (
     <div className="root">
-      <Main />
+      <Parent />
     </div>
   );
 };
