@@ -10,7 +10,7 @@
 **분리된 컴포넌트**
 <br>
 <br>
-Main - props를 전달해주는 부모 컴포넌트 모든 함수를 가지고 있음 <br>
+Parent - props를 전달해주는 부모 컴포넌트 모든 함수를 가지고 있음 <br>
 <br>
 Form - input의 속성을 담고있는 객체와 Form에 필요한 InputField 및 Button을 자식 컴포넌트로 가지고 있음 <br>
 <br>
