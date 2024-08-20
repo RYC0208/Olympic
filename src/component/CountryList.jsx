@@ -1,12 +1,18 @@
 import React from "react";
-
-const List = ({ countries, setCountries }) => {
-  
-  const sortedCountries = [...countries].sort((a, b)=> {
-    if(b.gold !== a.gold) return b.gold - a.gold;
-    if(b.silver !== a.silver) return b.silver - a.silver;
+import Button from "./common/Button";
+const CountryList = ({ countries, setCountries }) => {
+  const sortedCountries = [...countries].sort((a, b) => {
+    if (b.gold !== a.gold) return b.gold - a.gold;
+    if (b.silver !== a.silver) return b.silver - a.silver;
     return b.bronze - a.bronze;
-  })
+  });
+
+  const deleteCountry = () => {
+    sortedCountries.map((country) => {
+      const filteredCountry = sortedCountries.filter((c) => c !== country);
+      setCountries(filteredCountry);
+    });
+  };
 
   return (
     <div>
@@ -25,20 +31,18 @@ const List = ({ countries, setCountries }) => {
           </thead>
           <tbody>
             {sortedCountries.map((country, index) => (
-              <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#e0e0e0f8' : '#f7f7f7f8' }}>
+              <tr
+                key={index}
+                style={{
+                  backgroundColor: index % 2 === 0 ? "#e0e0e0f8" : "#f7f7f7f8",
+                }}
+              >
                 <td>{country.country}</td>
                 <td>{country.gold}</td>
                 <td>{country.silver}</td>
                 <td>{country.bronze}</td>
                 <td>
-                  <button
-                    onClick={() => {
-                      const filteredCountry = sortedCountries.filter((c) => c !== country);
-                      setCountries(filteredCountry);
-                    }}
-                  >
-                    삭제
-                  </button>
+                  <Button text="삭제" onClick={deleteCountry}></Button>
                 </td>
               </tr>
             ))}
@@ -49,4 +53,4 @@ const List = ({ countries, setCountries }) => {
   );
 };
 
-export default List;
+export default CountryList;

@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Parent from "./component/Parent";
+import OlympicMedalRecorder from "./component/OlympicMedalRecorder";
 
 const App = () => {
   return (
     <div className="root">
-      <Parent />
+      <OlympicMedalRecorder />
     </div>
   );
 };
